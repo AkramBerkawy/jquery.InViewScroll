@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="jquery.inviewscroll.js"></script>
+	<style>
+	.scrollable{
+    margin:10px;
+    height:100px;
+    overflow-y:scroll;
+	}
+	p
+	{
+		border-width:1px;
+		border-color:black;
+		border-style:solid;
+	}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("p").outview(".scrollable",function(){$("#cons").append($(this).text() + " out<br />");});
+			$("p").inview(".scrollable",function(){$("#cons").append($(this).text() + " in<br />");});
+		});
+	</script>
+</head>
+<body>
+	<div class="scrollable testme">
+		<p>item1<span></span></p>
+		<p>item2<span></span></p>
+		<p>item3<span></span></p>
+		<p>item4<span></span></p>
+		<p>item5<span></span></p>
+		<p>item6<span></span></p>
+		<p>item7<span></span></p>
+		<p>item8<span></span></p>
+		<p>item9<span></span></p>
+		<p>item10<span></span></p>
+		<p>item11<span></span></p>
+		<p>item12<span></span></p>
+	</div>
+	<div id="cons" class="scrollable" style="height:200px;">
+	
+	
+	</div>
+</body>
+</html>
